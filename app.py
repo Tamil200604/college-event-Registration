@@ -1,9 +1,9 @@
 import streamlit as st
 import os
 
-from utils.auth import admin_login
-from utils.audio_check import check_audio
-from utils.storage import load_csv, save_csv
+from auth import admin_login
+from audio_check import check_audio
+from storage import load_csv, save_csv
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
