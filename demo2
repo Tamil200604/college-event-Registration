@@ -1,0 +1,10 @@
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.save_to_file(
+    "this is a sample song lyrics for college dance performance",
+    "sample.wav"
+)
+engine.runAndWait()
+
+print("sample.wav created successfully")
