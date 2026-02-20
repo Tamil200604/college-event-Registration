@@ -1,0 +1,14 @@
+import wave
+import struct
+import math
+
+file = wave.open("sample.wav", "w")
+file.setparams((1, 2, 44100, 0, "NONE", "not compressed"))
+
+for i in range(44100):
+    value = int(32767.0 * math.sin(2.0 * math.pi * 440.0 * i / 44100))
+    data = struct.pack('<h', value)
+    file.writeframesraw(data)
+
+file.close()
+print("sample.wav created")
